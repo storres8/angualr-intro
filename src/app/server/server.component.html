@@ -1,8 +1,10 @@
 <!-- 
     With strong interpolation you can even call a method that returns a string,
-    the only thing is that you must return a string. No block code is allowed, 
+    the only thing is that you must return a string or something that can be easily
+    converted into a string like a number or boolean. No block code is allowed, 
     although you can use ternary expressions.
 -->
 <p>
-  {{ "Server" }} with an ID of {{ serverId }} is currently {{ serverStatus }}
+  {{ "Server" }} with an ID of {{ serverId }} is currently
+  {{ setStatus() }}
 </p>

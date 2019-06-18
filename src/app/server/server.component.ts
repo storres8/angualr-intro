@@ -13,6 +13,10 @@ our component decorator a list of arguments:
 export class ServerComponent {
   serverId = 10;
   serverStatus = "offline";
+
+  setStatus() {
+    return this.serverStatus;
+  }
 }
 
 // Once we export the component we must add it to the declorations array in the app modules file.
