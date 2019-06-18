@@ -15,6 +15,14 @@
 
 <p>{{ serverCreationStatus }}</p>
 
+<form>
+  <input
+    type="text"
+    class="form-control"
+    (input)="onUpdateServerName($event)"
+  />
+</form>
+
 <!--Servers component the parent component the shows 2 individual server components-->
 <app-server></app-server>
 <app-server></app-server>
