@@ -10,6 +10,9 @@ our component decorator a list of arguments:
   selector: "app-server",
   templateUrl: "../server/server.component.html"
 })
-export class ServerComponent {}
+export class ServerComponent {
+  serverId = 10;
+  serverStatus = "offline";
+}
 
 // Once we export the component we must add it to the declorations array in the app modules file.
