@@ -1,10 +1,19 @@
 <!--
     square brackets in angular indicate that we are using property binding. Meaning we want to 
     dynamically bind some property.
+
+    normal parentheses in angualr indicate that we are using event binding. Meaning we want to 
+    dynamically bind an event such an an onclick html event. 
  -->
-<button class="btn btn-primary mb-3" [disabled]="!allowNewServer">
+<button
+  class="btn btn-primary mb-3"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
   Add Server
 </button>
+
+<p>{{ serverCreationStatus }}</p>
 
 <!--Servers component the parent component the shows 2 individual server components-->
 <app-server></app-server>
