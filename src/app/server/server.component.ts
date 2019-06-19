@@ -8,7 +8,8 @@ our component decorator a list of arguments:
 */
 @Component({
   selector: "app-server",
-  templateUrl: "../server/server.component.html"
+  templateUrl: "../server/server.component.html",
+  styleUrls: ["../server/server.component.css"]
 })
 export class ServerComponent {
   serverId = 10;

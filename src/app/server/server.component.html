@@ -3,8 +3,16 @@
     the only thing is that you must return a string or something that can be easily
     converted into a string like a number or boolean. No block code is allowed, 
     although you can use ternary expressions.
+
+    [ngStyle] only works through property binding. We pass a JS object to it with the keys being a
+    style and the value being an expression we wish to execute. Style must be cammelCase.
+
+    [ngClass] only adds a CSS class if the method attatched evaluates to true.
 -->
-<p [ngStyle]="{ backgroundColor: getColor() }">
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
   {{ "Server" }} with an ID of {{ serverId }} is currently
   {{ setStatus() }}
 </p>
