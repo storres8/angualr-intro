@@ -4,7 +4,7 @@
     converted into a string like a number or boolean. No block code is allowed, 
     although you can use ternary expressions.
 -->
-<p>
+<p [ngStyle]="{ backgroundColor: getColor() }">
   {{ "Server" }} with an ID of {{ serverId }} is currently
   {{ setStatus() }}
 </p>

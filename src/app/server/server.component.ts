@@ -12,10 +12,18 @@ our component decorator a list of arguments:
 })
 export class ServerComponent {
   serverId = 10;
-  serverStatus = "offline";
+  serverStatus = "";
+
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? "online" : "offline";
+  }
 
   setStatus() {
     return this.serverStatus;
+  }
+
+  getColor() {
+    return this.serverStatus === "online" ? "green" : "red";
   }
 }
 
